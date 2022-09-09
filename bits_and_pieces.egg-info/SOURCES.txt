@@ -1,0 +1,6 @@
+setup.py
+application/__init__.py
+bits_and_pieces.egg-info/PKG-INFO
+bits_and_pieces.egg-info/SOURCES.txt
+bits_and_pieces.egg-info/dependency_links.txt
+bits_and_pieces.egg-info/top_level.txt

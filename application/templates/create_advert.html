@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+	<body>
+		{% block body %}
+		<form action="/adverts/create" method="post" enctype="multipart/form-data">
+			<input type="text" name="create-adv-title" placeholder="Название">
+			<textarea name="create-adv-description" placeholder="Описание">Гайка 2 мм от производителя</textarea>
+			<input type="number" name="create-adv-price" placeholder="Цена">
+			<input type="file" name="create-adv-files" accept=".jpg, .png, .jpeg" multiple>
+
+			<button name="create-adv-submit-btn" value="submit">Создать объявление</button>
+		</form>
+		{% endblock %}
+	</body>
+{% block javascript %}
+{% endblock %}

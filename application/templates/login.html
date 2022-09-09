@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+	<body>
+		{% block body %}
+		<form action="" method="post">
+			<input value="schorokhov.nikita@gmail.com" type="email" name="login-input-email" placeholder="Почта">
+			<input value="qwerty123" type="password" name="login-input-passwd" placeholder="Пароль">
+			<p>{{ error_msg.login_error }}</p>
+			<button name="login-submit-btn" value="submit">Войти</button>
+		</form>
+		{% endblock %}
+	</body>
+{% block javascript %}
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}

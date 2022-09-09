@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% block head %}
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Остатки</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		{% endblock %}
+	</head>
+	<body>
+		<a href="/index" class="button">На главную</a>
+		{% block body %}
+		{% if user_data %}
+			<p>Здравствуйте, {{ user_data.firstname }} из компании {{ user_data.company }}</p>
+			<a href="/auth/logout" class="button">Выйти</a>
+			<a href="/home/adverts" class="button">Мои объявления</a>
+		{% else %}
+			<a href="/auth/login" class="button">Войти</a>
+			<a href="/registration" class="button">Зарегистрироваться</a>
+		{% endif %}
+		{% endblock %}
+	</body>
+
+{% block javascript %}
+{% endblock %}
+</html>
